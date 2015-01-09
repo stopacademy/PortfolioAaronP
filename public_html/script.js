@@ -20,5 +20,29 @@ $("document").ready(function() {
     
     $("h4:lt(2)").css("background-color", "olive");
     
-    $("")
+    $("#clickToHide").click(function() {
+        $("#clickToHide").hide(); });
+    
+    $('#bringItBack').click(function(){
+        if ($('#clickToHide').is(':visible')) { 
+            $('#clickToHide').fadeout(2000);
+            $(this).val('Bring Back');
+        }
+        else
+        {
+            $('#clickToHide').fadeTn(2000);
+            $(this).val('Delete Text');
+        }
 });
+
+function mouseOverMe(){
+    $("p").html("Testing");
+};
+
+function mouseOnMe(){
+    $('hl').html("It's Free!!!");
+};
+
+function mouseClick(){
+    $("p").html("I am still here.");
+};
