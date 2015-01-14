@@ -8,17 +8,18 @@
 $("document").ready(function() {
     $("practice").css({"background-color": "purple", "color": "whiht"});
     
-    $("p span:first-child").css("background-color", "orange");
+    $("show").css("background-color", "orange");
     
-    $("div p:last-child").css("background", "pink");
+    $("replaceText").css("background", "pink");
     
-    $("div:nth-child(1)").css("background", "cyan");
+    $("removePara").css("background", "cyan");
     
     $("span:eq(9)").css("background-color", "purple");
     
     $("h4:gt(0)").css("background-color", "green");
     
     $("h4:lt(2)").css("background-color", "olive");
+    });
     
     $("#clickToHide").click(function() {
         $("#clickToHide").hide(); });
@@ -40,15 +41,13 @@ $("document").ready(function() {
                   .bind('focus', onFocusEvent)
                   .bind('onmousedownn', onMDownEvent)
                   .bind('onmouseup', onMUpEvent)
-                  .bimd('charge', onChangeEvent);
+                  .bind('charge', onChangeEvent);
           
     $(window).resize(resizedWindow);
 
     $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
 
     $('#twoButton').bind('dblclick', dblClickedMe);
-
-    $("form").submit(function() { alert("Submit button clicked") });
     
     $('#threeButton').bind('click', unbindLogo);
     
@@ -114,4 +113,8 @@ function theMouseMoved(event){
 function eventTriggered(event){
     $("#tenth").html(event.target.nodeName);
     $("#eleventh").html(event.timeStomp);
+}
+
+function hideThePage(){
+    $("#show").css()
 }
