@@ -55,6 +55,9 @@ $("document").ready(function() {
     theMouseMoved).click(event,eventTriggered);
     
     $('#replaceWHtml').bind('click', replaceWHtml);
+    $('#replaceWText').bind('click', replaceWText);
+    $('#addAPara').bind('click', addAPara);
+    $('#removeAPara').bind('click', removeAPara);
 });
 
 function mouseOverMe(){
@@ -115,6 +118,10 @@ function eventTriggered(event){
     $("#eleventh").html(event.timeStomp);
 }
 
-function hideThePage(){
-    $("#show").css()
+function replaceWHtml(){
+    $('#h3Tag').html('<h1> Can help h3</h3>');
+}
+
+function replaceeWText(){
+    $('#h3Tag').text('<h1> Can help h3</h3>');
 }
