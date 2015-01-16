@@ -52,12 +52,22 @@ $("document").ready(function() {
     $('#threeButton').bind('click', unbindLogo);
     
     $('#theBody').bind('keyup', checkKeyPressed).bind('mousemove',
-    theMouseMoved).click(event,eventTriggered);
+    theMouseMoved).click('event',eventTriggered);
     
     $('#replaceWHtml').bind('click', replaceWHtml);
     $('#replaceWText').bind('click', replaceWText);
     $('#addAPara').bind('click', addAPara);
     $('#removeAPara').bind('click', removeAPara);
+    $('#lastIsFirst').bind('click', lastIsFirst);
+    $('#addBefore').bind('click', addBefore);
+    $('#addAfter').bind('click', addAfter);
+    $('#addToTextBox').bind('click', addToTextBox);
+    
+    $('#randPara').before('<span>Before Paragraph</span>');
+    
+    $('<span> Insert Before Paragraph</span>').insertBefore('#randPara');
+    
+    $('<span> Insert Before Paragraph</span>').prependTo('#randPra');
 });
 
 function mouseOverMe(){
@@ -122,6 +132,31 @@ function replaceWHtml(){
     $('#h3Tag').html('<h1> Can help h3</h3>');
 }
 
-function replaceeWText(){
+function replaceWText(){
     $('#h3Tag').text('<h1> Can help h3</h3>');
 }
+
+function addAPara(){
+    $('#randPara').append('<p>Another paragraph</p>');
+}
+
+function removeAPara(){
+    $('#randPara p:last').remove();
+}
+
+function lastIsFirst(){
+    $('#randPara p:last').append($('#randPara p:first'));
+}
+
+function addBefore(){
+    $('#randPara p:last').before('Before');
+}
+
+function addAfter(){
+    $('#randPara p:first').after('After');
+}
+
+function addToTextBox(){
+    $('#randText').val('Random Text');
+}
+
