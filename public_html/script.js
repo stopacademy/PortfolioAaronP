@@ -21,6 +21,8 @@ $("document").ready(function() {
     $("h4:lt(2)").css("background-color", "olive");
     });
     
+    //To help switch or change texts that would show
+    
     $("#clickToHide").click(function() {
         $("#clickToHide").hide(); });
     
@@ -43,9 +45,9 @@ $("document").ready(function() {
                   .bind('onmouseup', onMUpEvent)
                   .bind('charge', onChangeEvent);
           
-    $(window).resize(resizedWindow);
+    $('window').resize('resizedWindow');
 
-    $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+    $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', 'mouseOutMe');
 
     $('#twoButton').bind('dblclick', dblClickedMe);
     
@@ -67,7 +69,15 @@ $("document").ready(function() {
     
     $('<span> Insert Before Paragraph</span>').insertBefore('#randPara');
     
-    $('<span> Insert Before Paragraph</span>').prependTo('#randPra');
+    $('<span> Prepend to Paragraph</span>').prependTo('#randPra');
+    
+    $('<span> Append To Paragraph</span>').appendTo('#randPara');
+    
+    $('#randPara').append('<span> Append Paragraph</span>');
+    
+    $('<span> Insert After Paragraph</span>').insertAfter('#randPara');
+    
+    $('randPara');
 });
 
 function mouseOverMe(){
@@ -111,7 +121,7 @@ function dblClickedMe(){
 }
 
 function unbindLogo(){
-    $("#logo").unbind('mouseover', mouseOverMe).unbind('mouseout', mouseOutMe);
+    $("#logo").unbind('mouseover', mouseOverMe).unbind('mouseout', 'mouseOutMe');
 }
 
 function checkKeyPressed(event){
@@ -160,3 +170,4 @@ function addToTextBox(){
     $('#randText').val('Random Text');
 }
 
+function 
