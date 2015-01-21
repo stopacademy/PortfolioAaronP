@@ -6,19 +6,19 @@
 
 
 $("document").ready(function() {
-    $("practice").css({"background-color": "purple", "color": "whiht"});
+    $("practice").css({"background-color": "greenyellow", "color": "whiht"});
     
-    $("show").css("background-color", "orange");
+    $("show").css({"background-color": "orange"});
     
-    $("replaceText").css("background", "pink");
+    $("replaceText").css({"background": "pink"});
     
-    $("removePara").css("background", "cyan");
+    $("removePara").css({"background": "cyan"});
     
-    $("span:eq(9)").css("background-color", "purple");
+    $("randPara").css({"background-color": "purple"});
     
-    $("h4:gt(0)").css("background-color", "green");
+    $("hide").css({"background-color": "green"});
     
-    $("h4:lt(2)").css("background-color", "olive");
+    $("superman").css({"background-color": "olive"});
     });
     
     //To help switch or change texts that would show
@@ -64,6 +64,7 @@ $("document").ready(function() {
     $('#addBefore').bind('click', addBefore);
     $('#addAfter').bind('click', addAfter);
     $('#addToTextBox').bind('click', addToTextBox);
+    $('deleteSpan').bind('click', deleteSpan);
     
     $('#randPara').before('<span>Before Paragraph</span>');
     
@@ -77,7 +78,7 @@ $("document").ready(function() {
     
     $('<span> Insert After Paragraph</span>').insertAfter('#randPara');
     
-    $('randPara');
+    $('#randPara').after('<span> After Paragraph</span>');
 });
 
 function mouseOverMe(){
@@ -170,4 +171,6 @@ function addToTextBox(){
     $('#randText').val('Random Text');
 }
 
-function 
+function deleteSpan(){
+    $('span').remove(':contains("Append")');
+}
