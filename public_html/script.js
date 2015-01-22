@@ -6,22 +6,22 @@
 
 
 $("document").ready(function() {
-    $("practice").css({"background-color": "greenyellow", "color": "whiht"});
+    $("practice").css({"background-color": "black", "color": "blue"});
     
-    $("show").css({"background-color": "orange"});
+    $("show").css({"background-color": "yellow"});
     
-    $("replaceText").css({"background": "pink"});
+    $("replaceText").css({"background": "gray"});
     
-    $("removePara").css({"background": "cyan"});
+    $("removePara").css({"background": "red"});
     
     $("randPara").css({"background-color": "purple"});
     
     $("hide").css({"background-color": "green"});
     
-    $("superman").css({"background-color": "olive"});
+    $("superman").css({"background-color": "lightblue"});
     });
     
-    //To help switch or change texts that would show
+    //To represent the color that is on the page. 
     
     $("#clickToHide").click(function() {
         $("#clickToHide").hide(); });
@@ -36,6 +36,8 @@ $("document").ready(function() {
             $('#clickToHide').fadeTn(2000);
             $(this).val('Delete Text');
         }
+        
+        //To show if the mouse function work.
         
     $('#oneButton').bind('click', alertButtonClick);
     
@@ -66,6 +68,8 @@ $("document").ready(function() {
     $('#addToTextBox').bind('click', addToTextBox);
     $('deleteSpan').bind('click', deleteSpan);
     
+    //To show if the paragraphs would pop up or not.
+    
     $('#randPara').before('<span>Before Paragraph</span>');
     
     $('<span> Insert Before Paragraph</span>').insertBefore('#randPara');
@@ -80,6 +84,8 @@ $("document").ready(function() {
     
     $('#randPara').after('<span> After Paragraph</span>');
 });
+
+//
 
 function mouseOverMe(){
     $("p").html("Testing");

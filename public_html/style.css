@@ -1,5 +1,17 @@
 body{
-    background-color: black;
+    background-color: red;
     
-    color: aquamarine;
+    color: black;
+}
+
+.practice {
+     background-color: lightblue;
+}
+
+.replaceText{
+    background-color: blue
+}
+
+.superman {
+     background-color: green
 }
